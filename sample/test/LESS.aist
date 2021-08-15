@@ -1,0 +1,51 @@
+void test_less(bool t, any l, any r)
+{
+    bool rez = l < r;
+    string p = "";
+    if(rez != t)
+       p = "\t\t!!!!!!!!! ERROR  !!!!!!!!!";
+    print(rez,"  "+l+" < "+r, p);
+}
+
+ print(" TEST <");
+print("==== string =====");
+test_less(false, "a",  "a");
+test_less(true,  "a",  "b");
+test_less(true,  "a", "ab");
+
+test_less(false, "b",  "a");
+test_less(false, "b", "ab");
+
+test_less(false, "ab",  "a");
+test_less(false, "ab", "ab");
+test_less(true,  "ab",  "b");
+
+print("==== int =====");
+test_less(true,  1,  2);
+test_less(false, 2,  2);
+test_less(false, 2,  1);
+test_less(false, 1, -1);
+test_less(true, -1,  1);
+print("==== float =====");
+test_less(false, 1.5, -1.5);
+test_less(true, -1.5,  1.5);
+test_less(false, 1.5,  1.5);
+print("==== float int =====");
+test_less(false, 1.5, -1);
+test_less(true,  1.5,  2);
+test_less(true, -1.5,  1);
+test_less(false,  1.,  1);
+print("==== int float =====");
+test_less(true,  1,  2.5);
+test_less(true, -2, -1.0);
+test_less(false, 2,  1.7);
+print("==== char =====");
+test_less(false, '0', '0');
+test_less(true,  '0', '1');
+test_less(false, '1', '0');
+
+print("==== char int =====");
+test_less(false, '0', 48);
+test_less(true,  '0', 49);
+test_less(false,  49,'0');
+

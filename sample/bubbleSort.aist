@@ -1,0 +1,115 @@
+
+void print_list(list l_print)
+{
+    string s;
+    int count = l_print.size;
+    for(int i = 0; i < count; i += 1)
+        s += l_print[i] + " ";
+    print(s);
+}
+
+void bubbleSort(list sl)
+{
+    int count = sl.size;
+    for(int i = 0; i < count; i += 1)
+    {
+        bool flag = true;
+        for(int j = 0; j < count - (i + 1); j += 1)
+        {
+            if(sl[j] > sl[j + 1])
+            {
+                flag = false;
+                any tmp = sl[j];
+                sl[j] = sl[j+1];
+                sl[j+1] = tmp;
+            }
+        }
+        if(flag)
+           break;
+    };
+}
+
+
+void bubbleSort_inv(list sl)
+{
+    int count = sl.size;
+    for(int i = 0; i < count; i += 1)
+    {
+        bool flag = true;
+        for(int j = 0; j < count - (i + 1); j += 1)
+        {
+            if(sl[j] < sl[j + 1])
+            {
+                flag = false;
+                any tmp = sl[j];
+                sl[j] = sl[j+1];
+                sl[j+1] = tmp;
+            }
+        }
+        if(flag)
+           break;
+    };
+}
+
+void bubbleSort_obj(object sl, int count)
+{
+    for(int i = 0; i < count; i += 1)
+    {
+        bool flag = true;
+        for(int j = 0; j < count - (i + 1); j += 1)
+        {
+            if(sl[j+""] > sl[(j + 1)+""])
+            {
+                flag = false;
+                any tmp = sl[j+""];
+                sl[j+""] = sl[""+(j+1)];
+                sl[(j+1)+""] = tmp;
+            }
+        }
+        if(flag)
+           break;
+    };
+    string s = "obj: ";
+    for(int i = 0; i < count; i += 1)
+        s += sl[i+""] +" ";
+    print(s);
+}
+
+
+for(int i = 0; i < 70; i+=1)
+{
+    print("------start "+i);
+
+    list l1 = [1,7,34,0,3,45,4,5,6,5];
+    list l2 = ["bba","ba","a","b","ba","bb","aa","aab","aaa","bab"];
+    list l3 = [1.,7.,34.,0.,3.,45.,4.,5.,6.,5.];
+
+    object ob;
+    for(int i = 0; i < l1.size; i += 1)
+        ob[""+i] = l2[i];
+    bubbleSort_obj(ob, l1.size);
+
+/*
+    print_list(l1);
+    bubbleSort(l1);
+    print_list(l1);
+    bubbleSort_inv(l1);
+    print_list(l1);
+
+    print_list(l2);
+    bubbleSort(l2);
+    print_list(l2);
+    bubbleSort_inv(l2);
+    print_list(l2);
+
+    print_list(l3);
+    bubbleSort(l3);
+
+
+    print_list(l3);
+    bubbleSort_inv(l3);
+    print_list(l3);
+*/
+    print("------stop "+i);
+    printDbg();
+}

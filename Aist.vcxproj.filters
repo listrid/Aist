@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="aist">
+      <UniqueIdentifier>{802b593c-5884-45e0-a361-e5642b26b5d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="aist\other">
+      <UniqueIdentifier>{f9f66d17-db15-4898-8211-2479d259191c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="src\test">
+      <UniqueIdentifier>{ddde980c-7f88-4304-a480-405571715c40}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src_aist\other\aist_parser_http.hpp">
+      <Filter>aist\other</Filter>
+    </ClInclude>
+    <ClInclude Include="src_aist\other\aist_parser_xml.hpp">
+      <Filter>aist\other</Filter>
+    </ClInclude>
+    <ClInclude Include="src_aist\aist.h">
+      <Filter>aist</Filter>
+    </ClInclude>
+    <ClInclude Include="src_aist\aist_dynamic_array.hpp">
+      <Filter>aist</Filter>
+    </ClInclude>
+    <ClInclude Include="src_aist\aist_mem.h">
+      <Filter>aist</Filter>
+    </ClInclude>
+    <ClInclude Include="src_aist\aist_runtime.h">
+      <Filter>aist</Filter>
+    </ClInclude>
+    <ClInclude Include="src_test\test\test.h">
+      <Filter>src\test</Filter>
+    </ClInclude>
+    <ClInclude Include="src_test\test.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src_aist\other\aist_debug_rt.cpp">
+      <Filter>aist\other</Filter>
+    </ClCompile>
+    <ClCompile Include="src_aist\other\aist_template.cpp">
+      <Filter>aist\other</Filter>
+    </ClCompile>
+    <ClCompile Include="src_aist\aist.cpp">
+      <Filter>aist</Filter>
+    </ClCompile>
+    <ClCompile Include="src_aist\aist_builtins.cpp">
+      <Filter>aist</Filter>
+    </ClCompile>
+    <ClCompile Include="src_aist\aist_common.cpp">
+      <Filter>aist</Filter>
+    </ClCompile>
+    <ClCompile Include="src_aist\aist_lexer.cpp">
+      <Filter>aist</Filter>
+    </ClCompile>
+    <ClCompile Include="src_aist\aist_mem.cpp">
+      <Filter>aist</Filter>
+    </ClCompile>
+    <ClCompile Include="src_aist\aist_parser.cpp">
+      <Filter>aist</Filter>
+    </ClCompile>
+    <ClCompile Include="src_aist\aist_runtime.cpp">
+      <Filter>aist</Filter>
+    </ClCompile>
+    <ClCompile Include="src_aist\aist_runtime_math.cpp">
+      <Filter>aist</Filter>
+    </ClCompile>
+    <ClCompile Include="src_test\Aist_main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src_test\test1.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src_test\test\test.cpp">
+      <Filter>src\test</Filter>
+    </ClCompile>
+    <ClCompile Include="src_test\test_list.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src_test\test_obj.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="src_test\ToDo.txt" />
+  </ItemGroup>
+</Project>

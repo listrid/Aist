@@ -1,0 +1,53 @@
+void test_laq(bool t, any l, any r)
+{
+    bool rez = l >= r;
+    string p = "";
+    if(rez != t)
+       p = "\t\t!!!!!!!!! ERROR  !!!!!!!!!";
+    print(rez,"  "+l+" >= "+r, p);
+}
+test_laq(false, "a", "ab");
+ print(" TEST >=");
+ print("==== string =====");
+test_laq(true, "a",  "a");
+test_laq(true, "b",  "a");
+test_laq(true, "ab", "a");
+
+test_laq(false, "a",  "b");
+test_laq(false, "ab", "b");
+
+test_laq(false, "a",  "ab");
+test_laq(true,  "ab", "ab");
+test_laq(true,  "b",  "ab");
+
+print("==== int =====");
+test_laq(true,  2,  1);
+test_laq(true,  2,  2);
+test_laq(false, 1,  2);
+test_laq(false,-1,  1);
+test_laq(true,  1,  -1);
+print("==== float =====");
+test_laq(false,-1.5,  1.5);
+test_laq(true,  1.5, -1.5);
+test_laq(true,  1.5,  1.5);
+print("==== float int =====");
+test_laq(false,-1, 1.5);
+test_laq(true,  2, 1.5);
+test_laq(true,  1,-1.5);
+test_laq(true,  1,  1.);
+print("==== int float =====");
+test_laq(true,  2.5,  1);
+test_laq(true, -1.0, -2);
+test_laq(false, 1.7,  2);
+print("==== char =====");
+test_laq(true,  '0', '0');
+test_laq(true,  '1', '0');
+test_laq(false, '0', '1');
+
+print("==== char int =====");
+test_laq(true, 48,  '0');
+test_laq(true, 49,  '0');
+test_laq(false, '0', 49);
+
+
+

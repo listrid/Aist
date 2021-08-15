@@ -1,0 +1,12 @@
+int factorial(int n)
+{
+    print(" --- n = "+ n);
+    if(n == 0 || n == 1)
+        return 1;
+    return factorial(n-1) * n;
+}
+
+int n1 = 14;
+int fret = factorial(n1);
+print("factorial "+n1+" = "+ fret);
+fret;

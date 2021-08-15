@@ -1,0 +1,51 @@
+void test_leq(bool t, any l, any r)
+{
+    bool rez = l <= r;
+    string p = "";
+    if(rez != t)
+       p = "\t\t!!!!!!!!! ERROR  !!!!!!!!!";
+    print(rez,"  "+l+" <= "+r, p);
+}
+// <=
+ print(" TEST <=");
+ print("==== string =====");
+test_leq(true, "a",  "a");
+test_leq(true, "a",  "b");
+test_leq(true, "a", "ab");
+
+test_leq(false, "b",  "a");
+test_leq(false, "b", "ab");
+
+test_leq(false, "ab",  "a");
+test_leq(true,  "ab", "ab");
+test_leq(true,  "ab",  "b");
+
+print("==== int =====");
+test_leq(true,  1,  2);
+test_leq(true,  2,  2);
+test_leq(false, 2,  1);
+test_leq(false, 1, -1);
+test_leq(true, -1,  1);
+print("==== float =====");
+test_leq(false, 1.5, -1.5);
+test_leq(true, -1.5,  1.5);
+test_leq(true,  1.5,  1.5);
+print("==== float int =====");
+test_leq(false, 1.5, -1);
+test_leq(true,  1.5,  2);
+test_leq(true, -1.5,  1);
+test_leq(true,   1.,  1);
+print("==== int float =====");
+test_leq(true,  1,  2.5);
+test_leq(true, -2, -1.0);
+test_leq(false, 2,  1.7);
+print("==== char =====");
+test_leq(true,  '0', '0');
+test_leq(true,  '0', '1');
+test_leq(false, '1', '0');
+
+print("==== char int =====");
+test_leq(true,  '0', 48);
+test_leq(true,  '0', 49);
+test_leq(false, 49, '0');
+
